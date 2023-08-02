@@ -16,14 +16,19 @@ namespace Palindromo.API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        #region Dependencias
         private readonly ILogger<ValuesController> _logger;
+        #endregion
 
+        #region Constructor
         public ValuesController(
             ILogger<ValuesController> logger)
         {
             this._logger = logger;
         }
+        #endregion
 
+        #region Endpoints
         [HttpGet("IsPalindrome")]
         public Dictionary<string, string> GetIsPalindrome(string value)
         {
@@ -58,6 +63,6 @@ namespace Palindromo.API.Controllers
 
             return result;
         }
-
+        #endregion
     }
 }
