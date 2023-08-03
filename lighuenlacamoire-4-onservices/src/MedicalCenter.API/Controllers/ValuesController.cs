@@ -4,6 +4,9 @@ using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using MedicalCenter.Domain.Support.Helpers;
+using System.IO;
+using System.Linq;
+using System.ComponentModel.DataAnnotations;
 
 namespace MedicalCenter.API.Controllers
 {
@@ -26,14 +29,31 @@ namespace MedicalCenter.API.Controllers
 
         #region Endpoints
         [HttpPost("CompareHeightAndWeight")]
-        public async Task<IActionResult> UploadCompareHeightAndWeight(IFormFile file)
+        public async Task<IActionResult> UploadCompareHeightAndWeight([Required]IFormFile file)
         {
-            if(file != null)
+            if (file != null)
             {
-                string nose = await file.ReadAsStringAsync();
-                return Ok(nose);
+                List<string> result = new List<string>();
+                var list = await file.ReadAsPairNumbersListAsync();
+
+                for (int i = 1;i < list.Count; i++)
+                {
+                    var prevItem = list.ElementAt(i - 1);
+                    var currentItem = list.ElementAt(i);
+
+                    if(currentItem.Value.Key > prevItem.Value.Key
+                        && currentItem.Value.Value > prevItem.Value.Value)
+                    {
+                        result.Add(currentItem.Key.ToString());
+                    }
+                }
+
+                return Ok(string.Join("-", result));
             }
-            return Ok("2-3-5");
+            else
+            {
+                throw new FileNotFoundException();
+            }
         }
         #endregion
     }
