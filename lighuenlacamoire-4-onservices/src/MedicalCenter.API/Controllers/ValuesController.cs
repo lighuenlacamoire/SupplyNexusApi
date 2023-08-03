@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using MedicalCenter.Domain.Support.Helpers;
 
 namespace MedicalCenter.API.Controllers
 {
@@ -23,10 +25,15 @@ namespace MedicalCenter.API.Controllers
         #endregion
 
         #region Endpoints
-        [HttpGet("CompareHeightAndWeight")]
-        public string GetCompareHeightAndWeight()
+        [HttpPost("CompareHeightAndWeight")]
+        public async Task<IActionResult> UploadCompareHeightAndWeight(IFormFile file)
         {
-            return "2-3-5";
+            if(file != null)
+            {
+                string nose = await file.ReadAsStringAsync();
+                return Ok(nose);
+            }
+            return Ok("2-3-5");
         }
         #endregion
     }
