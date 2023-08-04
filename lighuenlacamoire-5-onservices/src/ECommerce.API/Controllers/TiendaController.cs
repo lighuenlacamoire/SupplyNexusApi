@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
 using System;
+using System.Threading.Tasks;
 
 namespace ECommerce.API.Controllers
 {
@@ -32,7 +33,7 @@ namespace ECommerce.API.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<Pedido>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Exception))]
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(Exception))]
-        public IActionResult GetAllEntregas()
+        public async Task<IActionResult> GetAllEntregas()
         {
             var response = _tiendaService.GetAllEntregas();
             return Ok(response);

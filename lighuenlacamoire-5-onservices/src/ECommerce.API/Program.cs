@@ -35,7 +35,6 @@ using (var scope =
 using (var context = scope.ServiceProvider.GetRequiredService<DataContext>())
     context.Database.EnsureCreated();
 */
-app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

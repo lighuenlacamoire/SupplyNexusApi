@@ -2,11 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Palindromo.API.Support.Helpers;
+using Swashbuckle.AspNetCore.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Palindromo.API.Controllers
@@ -29,8 +31,12 @@ namespace Palindromo.API.Controllers
         #endregion
 
         #region Endpoints
+        [SwaggerOperation(Summary = "Devuelve si el texto es palindromo o no y distintas codificaciones")]
         [HttpGet("IsPalindrome")]
-        public Dictionary<string, string> GetIsPalindrome(string value)
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Dictionary<string, string>))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Exception))]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(Exception))]
+        public async Task<IActionResult> GetIsPalindrome(string value)
         {
             var result = new Dictionary<string, string> 
             {
@@ -61,7 +67,7 @@ namespace Palindromo.API.Controllers
                 result["ISO-8859-1"] = iso.GetString(bytes);
             }
 
-            return result;
+            return Ok(result);
         }
         #endregion
     }

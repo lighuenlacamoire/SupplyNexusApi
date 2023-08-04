@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Swashbuckle.AspNetCore.Annotations;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Calculator.API.Controllers
 {
@@ -24,8 +26,12 @@ namespace Calculator.API.Controllers
         #endregion
 
         #region Endpoints
+        [SwaggerOperation(Summary = "Obtiene el listado de numeros armstrong")]
         [HttpGet("ArmstrongNumbers")]
-        public List<int> GetArmstrongNumbers()
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<int>))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Exception))]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(Exception))]
+        public async Task<IActionResult> GetArmstrongNumbers()
         {
             List<int> result = new List<int>();
             // val = variable/digito a multiplicar (a o b o c)
@@ -49,7 +55,7 @@ namespace Calculator.API.Controllers
                     result.Add(number);
                 }
             }
-            return result;
+            return Ok(result);
         }
         #endregion
     }
