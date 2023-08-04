@@ -1,0 +1,336 @@
+{
+	"info": {
+		"_postman_id": "43e825af-329b-4c1d-a110-cbee535cdb8b",
+		"name": "SupplyNexus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ejercicio-1",
+			"item": [
+				{
+					"name": "Es Palindromo o no",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Lighuen/GIT/Owner/SupplyNexusApi/lighuenlacamoire-4-onservices/reporte.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:41501/api/Values/IsPalindrome?value=Ur%C3%BA",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "41501",
+							"path": [
+								"api",
+								"Values",
+								"IsPalindrome"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "Ur%C3%BA"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Lighuen/GIT/Owner/SupplyNexusApi/lighuenlacamoire-4-onservices/reporte.txt"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:41501/api/Values/IsPalindrome?value=Ur%C3%BA",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "41501",
+									"path": [
+										"api",
+										"Values",
+										"IsPalindrome"
+									],
+									"query": [
+										{
+											"key": "value",
+											"value": "Ur%C3%BA"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Aug 2023 00:24:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\"IsPalindrome\":\"Es palíndromo\",\"UTF8\":\"Urú\",\"ISO-8859-1\":\"UrÃº\"}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ejercicio-2",
+			"item": [
+				{
+					"name": "Obtiene numeros armstrong",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Lighuen/GIT/Owner/SupplyNexusApi/lighuenlacamoire-4-onservices/reporte.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:24879/api/Values/ArmstrongNumbers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "24879",
+							"path": [
+								"api",
+								"Values",
+								"ArmstrongNumbers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Lighuen/GIT/Owner/SupplyNexusApi/lighuenlacamoire-4-onservices/reporte.txt"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:24879/api/Values/ArmstrongNumbers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "24879",
+									"path": [
+										"api",
+										"Values",
+										"ArmstrongNumbers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Aug 2023 00:29:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[153,370,371,407]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Ejercicio-4",
+			"item": [
+				{
+					"name": "Compara Altura y peso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Lighuen/GIT/Owner/SupplyNexusApi/lighuenlacamoire-4-onservices/reporte.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5814/api/Values/CompareHeightAndWeight",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5814",
+							"path": [
+								"api",
+								"Values",
+								"CompareHeightAndWeight"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ejercicio-5",
+			"item": [
+				{
+					"name": "Obtiene las tiendas los pedidos asociados por fecha",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Lighuen/GIT/Owner/SupplyNexusApi/lighuenlacamoire-4-onservices/reporte.txt"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:19927/api/Tienda/Entregas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "19927",
+							"path": [
+								"api",
+								"Tienda",
+								"Entregas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 - Ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Lighuen/GIT/Owner/SupplyNexusApi/lighuenlacamoire-4-onservices/reporte.txt"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:19927/api/Tienda/Entregas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "19927",
+									"path": [
+										"api",
+										"Tienda",
+										"Entregas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Aug 2023 00:34:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"TIENDA\":\"Alcobendas\",\"FECHA ENTREGA\":\"2022-05-13T00:00:00\",\"Nº PEDIDOS\":2},{\"TIENDA\":\"Ciudad Imagen\",\"FECHA ENTREGA\":\"2022-05-15T00:00:00\",\"Nº PEDIDOS\":2},{\"TIENDA\":\"Alcobendas\",\"FECHA ENTREGA\":\"2022-05-16T00:00:00\",\"Nº PEDIDOS\":1},{\"TIENDA\":\"Ciudad Imagen\",\"FECHA ENTREGA\":\"2022-05-23T00:00:00\",\"Nº PEDIDOS\":1},{\"TIENDA\":\"Cuenca\",\"FECHA ENTREGA\":\"2022-05-23T00:00:00\",\"Nº PEDIDOS\":1}]"
+						}
+					]
+				}
+			]
+		}
+	]
+}

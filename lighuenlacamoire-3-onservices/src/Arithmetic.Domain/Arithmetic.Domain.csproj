@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>annotations</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<NoWarn>$(NoWarn);1701;1702;CS1591;CS8600;CS8604;CS8603;CS8602;CS8618;CS8767</NoWarn>
+	</PropertyGroup>
+
+</Project>

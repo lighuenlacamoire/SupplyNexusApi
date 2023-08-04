@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{504E46FE-8534-4C67-8764-DA50A4D46983}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalCenter.API", "src\MedicalCenter.API\MedicalCenter.API.csproj", "{A1CCE458-70FE-48F4-A33B-1E8C22D55984}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalCenter.Domain", "src\MedicalCenter.Domain\MedicalCenter.Domain.csproj", "{9C4CF542-EF32-482E-866E-49CD8B1AAF47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1CCE458-70FE-48F4-A33B-1E8C22D55984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1CCE458-70FE-48F4-A33B-1E8C22D55984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1CCE458-70FE-48F4-A33B-1E8C22D55984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1CCE458-70FE-48F4-A33B-1E8C22D55984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C4CF542-EF32-482E-866E-49CD8B1AAF47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C4CF542-EF32-482E-866E-49CD8B1AAF47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C4CF542-EF32-482E-866E-49CD8B1AAF47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C4CF542-EF32-482E-866E-49CD8B1AAF47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A1CCE458-70FE-48F4-A33B-1E8C22D55984} = {504E46FE-8534-4C67-8764-DA50A4D46983}
+		{9C4CF542-EF32-482E-866E-49CD8B1AAF47} = {504E46FE-8534-4C67-8764-DA50A4D46983}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0ED46C20-292C-4B4E-A135-EA4D1D146E1C}
+	EndGlobalSection
+EndGlobal
