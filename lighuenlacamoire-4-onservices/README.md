@@ -11,5 +11,5 @@ El proyecto presenta las siguientes cualidades:
 
 ### Ejecucion y Prueba
 Simplemente levantar el proyecto y se abrira swagger hay solo un endpoint el cual solicita seleccionar un archivo para subir y realizar el proceso:
-> NOTA: Se adjunta un [Archivo de texto](/reporte.txt) utilizado para las pruebas el cual posee el formato deseado.
+> NOTA: Se adjunta un [Archivo de texto](/lighuenlacamoire-4-onservices/reporte.txt) utilizado para las pruebas el cual posee el formato deseado.
 >
